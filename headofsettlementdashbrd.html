@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>head of settlement </title>
+    <link rel="stylesheet" href="css/relationshipmanagerdash.css">
+</head>
+
+<body>
+
+    <!-- Status Bar -->
+    <div class="status-bar">
+        <div class="status-bar-left">
+            <span class="status-indicator online"></span>
+            <span class="status-text">Online</span>
+        </div>
+        <div class="status-bar-right">
+            <span class="notification">3 New Notifications</span>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-brand">Head of settlement</div>
+        <ul class="navbar-items">
+            <li><a href="#entries-overview">Entries Overview</a></li>
+            <li><a href="#customer-requests">Customer Requests</a></li>
+            <!-- Profile Dropdown -->
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Profile</a>
+                <div class="dropdown-content">
+                    <a href="#">Settings</a>
+                    <a href="#">Help</a>
+                </div>
+            </li>
+            <li><a href="#logout">Logout</a></li>
+        </ul>
+    </nav>
+
+    <!-- Entries Overview (Stacked Bar) -->
+    <section id="entries-overview" class="section">
+        <h1>Customer Entries Overview</h1>
+        
+        <!-- Stacked bar with tooltips -->
+        <div class="stacked-bar">
+            <div class="bar new-entries" data-tooltip="New Entries: 15"></div>
+            <div class="bar approved-entries" data-tooltip="Approved Entries: 10"></div>
+            <div class="bar disapproved-entries" data-tooltip="Disapproved Entries: 5"></div>
+        </div>
+        
+        <!-- Legend -->
+        <div class="legend">
+            <div><span class="color-box new-entries"></span> New Entries</div>
+            <div><span class="color-box approved-entries"></span> Approved Entries</div>
+            <div><span class="color-box disapproved-entries"></span> Disapproved Entries</div>
+        </div>
+        
+        <!-- Detailed Breakdown -->
+        <div class="entries-breakdown">
+            <div>Total New Entries: <span>15</span></div>
+            <div>Total Approved: <span>10</span></div>
+            <div>Total Disapproved: <span>5</span></div>
+        </div>
+    </section>
+
+    <!-- Customer Form Requests (Table) -->
+    <section id="customer-requests" class="section">
+        <h1>Customer Form Requests</h1>
+        <table class="enhanced-table">
+            <thead>
+                <tr>
+                    <th>Form ID</th>
+                    <th>Customer Name</th>
+                    <th>Form Type</th>
+                    <th>Request Date</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Sample data -->
+                <tr>
+                    <td>001</td>
+                    <td>John Doe</td>
+                    <td>Account Information Form</td>
+                    <td>2023-08-09</td>
+                    <td><span class="status pending">Pending</span></td>
+                    <td>
+                        <button class="view-btn">View Details</button>
+                    </td>
+                </tr>
+                <!-- More rows can be added... -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Detailed View (Modal) -->
+    <div id="form-detail-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Form Details</h2>
+            <!-- Form Details Here -->
+            <div class="form-details">
+                <!-- Sample form details; replace with actual content when needed -->
+                <p>Customer Name: John Doe</p>
+                <p>Form Type: Account Information Form</p>
+                <p>Status: <span class="status pending">Pending</span></p>
+                <!-- ... other details ... -->
+            </div>
+            <div class="action-buttons">
+                <button class="approve-btn-modal">Approve</button>
+                <button class="decline-btn-modal">Decline</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Head of settlement is committed to providing the best financial solutions for our clients.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li>Phone: +123 456 7890</li>
+                    <li>Email: support@bankingrm.com</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2023 Banking Relationship Manager, All rights reserved.
+        </div>
+    </footer>
+
+    <script src="js/relationshipmanagerdash.js"></script>
+</body>
+
+</html>
