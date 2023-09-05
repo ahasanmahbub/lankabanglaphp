@@ -46,27 +46,3 @@ inputs.forEach(input => {
 });
 
 loginForm.addEventListener("submit", handleLogin);
-
-
- // JavaScript to toggle the visibility of the dropdown content
- document.addEventListener("DOMContentLoaded", function() {
-    const dropdown = document.querySelector(".dropdown");
-    const dropdownContent = document.querySelector(".dropdown-content");
-
-    dropdown.addEventListener("click", function() {
-        dropdownContent.classList.toggle("show");
-    });
-
-    // Close the dropdown menu when clicking outside of it
-    window.addEventListener("click", function(event) {
-        if (!event.target.matches(".dropbtn")) {
-            const dropdowns = document.getElementsByClassName("dropdown-content");
-            for (let i = 0; i < dropdowns.length; i++) {
-                const openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains("show")) {
-                    openDropdown.classList.remove("show");
-                }
-            }
-        }
-    });
-});

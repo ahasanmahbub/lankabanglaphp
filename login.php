@@ -3,7 +3,7 @@ session_start();
 
 // If user is already logged in, redirect to the welcome page
 if(isset($_SESSION['username'])) {
-    header("location: customerdashboard.php");
+    header("location: welcome.php");
     exit;
 }
 
@@ -60,22 +60,19 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-
-<!-- Add the navigation bar code here -->
-<div class="navbar">
-        <!-- Add the navigation bar code here -->
 <div class="navbar">
     <ul>
         <li class="dropdown">
             <a href="#" class="dropbtn">Menu</a>
             <div class="dropdown-content">
-                <a href="relationship_manager_dashboard.php">Relationship Manager</a>
-                <a href="head_of_settlement_dashboard.php">Head of Settlement</a>
-                <a href="administrator_dashboard.php">Administrator</a>
+                <a href="headofsettlementdashbrd.html">Relationship Manager</a>
+                <a href="headofsettlementdashbrd.html">Head of Settlement</a>
+                <a href="administratordash.php">Administrator</a>
             </div>
         </li>
     </ul>
 </div>
+
 
 
     <img class="wave" src="img/wave.png">
@@ -125,35 +122,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                     </div>
                 </div>
                 <a href="#">Forgot Password?</a>
-                <input type="submit" class="btn" value="Login" onclick="window.location.href='./customerdashboard.php'">
+                <input type="submit" class="btn" value="Login" onclick="window.location.href='./customerdashboard.html'">
                 <button type="button" class="btn-signup" onclick="window.location.href='./register.php'">Sign Up</button>
             </form>
         </div>
     </div>
-    <script>
-    // JavaScript to toggle the visibility of the dropdown content
-    document.addEventListener("DOMContentLoaded", function() {
-        const dropdown = document.querySelector(".dropdown");
-        const dropdownContent = document.querySelector(".dropdown-content");
-
-        dropdown.addEventListener("click", function() {
-            dropdownContent.classList.toggle("show");
-        });
-
-        // Close the dropdown menu when clicking outside of it
-        window.addEventListener("click", function(event) {
-            if (!event.target.matches(".dropbtn")) {
-                const dropdowns = document.getElementsByClassName("dropdown-content");
-                for (let i = 0; i < dropdowns.length; i++) {
-                    const openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains("show")) {
-                        openDropdown.classList.remove("show");
-                    }
-                }
-            }
-        });
-    });
-</script>
     <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
